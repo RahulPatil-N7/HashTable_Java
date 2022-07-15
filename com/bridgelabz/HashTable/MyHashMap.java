@@ -12,7 +12,7 @@ public class MyHashMap<K,V> {
 	public V get(K key) {
 		Node<K, V> mapNode = (Node<K, V>) this.linkedList.search(key);
         	if (mapNode == null) {
-            	return null;
+            		return null;
         	}
         	else {
         		return mapNode.getValue();
@@ -26,7 +26,7 @@ public class MyHashMap<K,V> {
 		Node<K, V> mapNode = (Node<K, V>) this.linkedList.search(key);
         	if (mapNode == null) {
             		mapNode = new Node<>(key, value);
-            	this.linkedList.append(mapNode);
+            		this.linkedList.append(mapNode);
         	}
         	else {
             	mapNode.setValue(value);
