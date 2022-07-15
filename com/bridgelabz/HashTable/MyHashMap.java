@@ -5,7 +5,7 @@ public class MyHashMap<K,V> {
 	
 	public MyHashMap() {
         this.linkedList = new LinkedList<>();
-    }
+	}
 	
 	/* using search ,method of my linked list
 	 * to get value.  */
@@ -17,7 +17,7 @@ public class MyHashMap<K,V> {
         else {
         	return mapNode.getValue();
         }
-    }
+	}
 	
 	/* function to add node to hash table.
 	 * first it checks if table is empty
@@ -31,5 +31,17 @@ public class MyHashMap<K,V> {
         else {
             mapNode.setValue(value);
         }
-    }
+	}
+	
+	/* function to remove node from hash table.
+	 * first it checks if table is empty
+	 *  then removes node using delete method of my linked list */
+	public V remove(K key) {
+		Node<K, V> mapNode = (Node<K, V>) this.linkedList.delete(key);
+		if (mapNode == null) {
+			System.out.println("Word is not present phrase");
+		}
+		return mapNode.getValue();
+		
+	}
 }
