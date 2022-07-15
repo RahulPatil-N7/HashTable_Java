@@ -10,6 +10,7 @@ public class HashMapMain {
 		
 		//Using mapNode object to call MyMapNode function
 		mapNode.frequencyWord();
+		mapNode.findWordFrequencyLargeParagraph();
 		
 	}
 
