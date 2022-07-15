@@ -11,12 +11,12 @@ public class MyHashMap<K,V> {
 	 * to get value.  */
 	public V get(K key) {
 		Node<K, V> mapNode = (Node<K, V>) this.linkedList.search(key);
-        if (mapNode == null) {
-            return null;
-        }
-        else {
-        	return mapNode.getValue();
-        }
+        	if (mapNode == null) {
+            	return null;
+        	}
+        	else {
+        		return mapNode.getValue();
+        	}
 	}
 	
 	/* function to add node to hash table.
@@ -24,13 +24,13 @@ public class MyHashMap<K,V> {
 	 *  then adds node using append method of my linked list */
 	public void add(K key, V value) {
 		Node<K, V> mapNode = (Node<K, V>) this.linkedList.search(key);
-        if (mapNode == null) {
-            mapNode = new Node<>(key, value);
-            this.linkedList.append(mapNode);
-        }
-        else {
-            mapNode.setValue(value);
-        }
+        	if (mapNode == null) {
+            		mapNode = new Node<>(key, value);
+            	this.linkedList.append(mapNode);
+        	}
+        	else {
+            	mapNode.setValue(value);
+        	}
 	}
 	
 	/* function to remove node from hash table.
